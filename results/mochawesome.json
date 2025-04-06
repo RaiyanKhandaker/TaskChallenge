@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-06T15:23:19.315Z",
+    "end": "2025-04-06T15:24:02.022Z",
+    "duration": 42707,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f1d7db8-cc44-410e-a3f6-b9dc3698f365",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\trampolineTest.cy.js",
+      "file": "cypress\\e2e\\tests\\trampolineTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15eb2135-fc51-4f97-8a89-7d5bd1f1c71b",
+          "title": "Otto.de POM Trampoline Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the trampoline shopping flow correctly",
+              "fullTitle": "Otto.de POM Trampoline Flow should complete the trampoline shopping flow correctly",
+              "timedOut": null,
+              "duration": 39784,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.otto.de/');\ncy.wait(2000);\nhomePage.acceptCookies();\ncy.wait(2000);\nhomePage.search('trampolin');\ncy.wait(2000);\nsearchResultsPage.sortByHighestPrice();\ncy.wait(2000);\nsearchResultsPage.verifySortedProducts();\ncy.wait(2000);\nsearchResultsPage.priceVerification();\ncy.wait(2000);\nsearchResultsPage.applyPriceFilter(500, 1000);\ncy.wait(2000);\nsearchResultsPage.openProduct(1);\ncy.wait(2000);\nproductDetailPage.saveProductTitle();\ncy.wait(2000);\nconst productName = productDetailPage.saveProductTitle();\ncy.wait(2000);\nproductDetailPage.addToCart();\ncy.wait(2000);\ncartPage.verifyProductInCart(productName);",
+              "err": {},
+              "uuid": "f9c7381c-a5d7-433a-876e-50203f5979c3",
+              "parentUUID": "15eb2135-fc51-4f97-8a89-7d5bd1f1c71b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9c7381c-a5d7-433a-876e-50203f5979c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
